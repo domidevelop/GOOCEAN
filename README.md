@@ -1,4 +1,4 @@
-# domilooplab
+# GOOCEAN
 
 Gran Canaria Social Network Theme
 
