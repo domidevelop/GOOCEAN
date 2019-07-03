@@ -7592,8 +7592,8 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 body {
-  background: #333;
-  color: #fff; }
+  background: #786963;
+  color: #f8f2e3; }
 
 .navbar-brand {
   font-size: 2rem; }
@@ -7623,12 +7623,16 @@ body {
 #home-section .fas,
 #create-section .fas {
   color: #2567a1;
-  padding: 5px;
-  border-radius: 5px; }
+  padding: 5px; }
 
 #explore-section .fas,
 #share-section .fas {
-  background: #333;
-  color: #fff;
-  padding: 5px;
-  border-radius: 5px; }
+  color: #786963;
+  padding: 5px; }
+
+.portfolio-link {
+  color: #2f2927; }
+
+.portfolio-link:hover {
+  text-decoration: none;
+  color: #3b3431; }
