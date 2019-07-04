@@ -7620,13 +7620,47 @@ body {
   #home-section .card-form {
     opacity: 0.8; }
 
+#create-head-section,
+#connect-head-section {
+  background: url(../img/water-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 300px;
+  position: relative; }
+  #create-head-section .dark-overlay-blue,
+  #connect-head-section .dark-overlay-blue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 300px;
+    background: rgba(37, 102, 161, 0.3); }
+
+#explore-head-section,
+#main-footer {
+  background: url(../img/sand-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 300px;
+  position: relative; }
+  #explore-head-section .dark-overlay-light,
+  #main-footer .dark-overlay-light {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 300px;
+    background: rgba(120, 105, 99, 0.7); }
+
 #home-section .fas,
 #create-section .fas {
   color: #2567a1;
   padding: 5px; }
 
 #explore-section .fas,
-#share-section .fas {
+#connect-section .fas {
   color: #786963;
   padding: 5px; }
 
@@ -7636,3 +7670,25 @@ body {
 .portfolio-link:hover {
   text-decoration: none;
   color: #3b3431; }
+
+@media (max-width: 576px) {
+  .display-4 {
+    font-size: 3rem; }
+
+  .lead {
+    font-size: 1.25rem; } }
+@media (max-width: 480px) {
+  .display-4 {
+    font-size: 2.5rem; }
+
+  .lead {
+    font-size: 1rem; } }
+@media (max-width: 256px) {
+  .display-4 {
+    font-size: 1.5rem; }
+
+  .lead {
+    font-size: 0.9rem; }
+
+  #main-footer {
+    font-size: 0.8rem; } }
