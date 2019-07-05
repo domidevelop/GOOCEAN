@@ -15,7 +15,7 @@
       class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top"
     >
       <div class="container">
-        <a href="index.html" class="navbar-brand">G O C E A N</a>
+        <a href="#home" class="navbar-brand">G O C E A N</a>
         <span class="navbar-text text-light d-none d-lg-inline-block">
           Gran Canaria Social Network
         </span>
@@ -120,6 +120,8 @@
                       type="submit"
                       value="Sign Up"
                       class="btn btn-outline-light btn-block"
+                      data-toggle="modal"
+                      data-target="#moreInfoModal"
                     />
                   </form>
                 </div>
@@ -142,7 +144,13 @@
                 way to connect with people on our island. Others can find you
                 too so you can grow your network.
               </p>
-              <a href="#" class="btn btn-outline-light">Sign Up</a>
+              <a
+                href="#"
+                class="btn btn-outline-light"
+                data-toggle="modal"
+                data-target="#moreInfoModal"
+                >Sign Up</a
+              >
             </div>
           </div>
         </div>
@@ -199,7 +207,13 @@
                 When you have your profile set, it is time to explore our
                 network. You can look for people, groups, activities.
               </p>
-              <a href="#" class="btn btn-outline-light">Find out more</a>
+              <a
+                href="#"
+                class="btn btn-outline-light"
+                data-toggle="modal"
+                data-target="#moreInfoModal"
+                >Find out more</a
+              >
             </div>
           </div>
         </div>
@@ -255,7 +269,13 @@
                 Time to connect and grow your network. Others are waiting too.
                 Start connecting and sharing your stories.
               </p>
-              <a href="#" class="btn btn-outline-light">Find people</a>
+              <a
+                href="#"
+                class="btn btn-outline-light"
+                data-toggle="modal"
+                data-target="#moreInfoModal"
+                >Find people</a
+              >
             </div>
           </div>
         </div>
@@ -332,6 +352,55 @@
       </div>
     </footer>
 
+    <!-- MORE INFO ON DOMIDEVELOP MODAL -->
+    <div class="modal fade text-dark" id="moreInfoModal">
+      <div class="modal-dialog">
+        <div class="modal-content bg-light">
+          <div class="modal-header">
+            <h5 class="modal-title font-weight-bold">Discover More</h5>
+            <button class="close" data-dismiss="modal">
+              <span>&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              This website is for showcase purpose only. Feel free to visit my
+              portfolio website for more projects and more info about the
+              author.
+            </p>
+            <hr />
+            <p>
+              If you like what you see, contact me! You can easily do so by
+              sending me email. I am looking forward for possible collaboration.
+            </p>
+            <hr />
+            <p>
+              Portfolio: <br />
+              <a href="#home" class="portfolio-link  font-weight-bold"
+                >d o m i d e v e l o p . c o m</a
+              >
+            </p>
+            <p>
+              Email: <br />
+              <a
+                href="mailto:domagoj.kirigin@gmail.com"
+                class="portfolio-link  font-weight-bold"
+                >domagoj.kirigin@gmail.com</a
+              >
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a
+              href="#home"
+              class="btn btn-primary btn-block"
+              data-dismiss="modal"
+              >G O C E A N</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- CONTACT MODAL -->
     <div class="modal fade text-dark" id="contactModal">
       <div class="modal-dialog">
@@ -359,7 +428,14 @@
             </form>
           </div>
           <div class="modal-footer">
-            <button class="btn btn-primary btn-block">Submit</button>
+            <button
+              class="btn btn-primary btn-block"
+              data-toggle="modal"
+              data-target="#moreInfoModal"
+              data-dismiss="modal"
+            >
+              Submit
+            </button>
           </div>
         </div>
       </div>

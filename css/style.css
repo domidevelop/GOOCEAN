@@ -7669,7 +7669,7 @@ body {
 
 .portfolio-link:hover {
   text-decoration: none;
-  color: #3b3431; }
+  color: rgba(47, 41, 39, 0.7); }
 
 @media (max-width: 576px) {
   .display-4 {
