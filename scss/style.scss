@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300&display=swap');
+
+//  ******************CUTSOMIZE BOOTSTRAP******************
+
+$primary: #2567a1;
+$dark: #786963;
+$light: #f8f2e3;
+
+$font-family-base: 'Montserrat', sans-serif;
+
+@import 'bootstrap';
+
+//  ****************** end of CUTSOMIZE BOOTSTRAP******************
+
+body {
+  background: $dark;
+  color: $light;
+  //font-family: 'Josefin Sans', sans-serif;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+}
+
+@mixin icon-blue {
+  color: #2567a1;
+  padding: 5px;
+}
+
+@mixin icon-light {
+  color: #786963;
+  padding: 5px;
+}
+
+.navbar {
+  border-bottom: #f8f2e3 1px solid;
+  opacity: 0.8;
+}
+
+#home-section {
+  background: url(../img/home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 700px;
+
+  .dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 700px;
+    background: rgba(120, 105, 99, 0.7);
+  }
+
+  .home-inner {
+    padding-top: 150px;
+  }
+
+  .card-form {
+    opacity: 0.8;
+  }
+}
+
+#create-head-section,
+#connect-head-section {
+  background: url(../img/water-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 300px;
+  position: relative;
+
+  .dark-overlay-blue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 300px;
+    background: rgba(37, 102, 161, 0.3);
+  }
+}
+
+#explore-head-section,
+#main-footer {
+  background: url(../img/sand-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 300px;
+  position: relative;
+
+  .dark-overlay-light {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 300px;
+    background: rgba(120, 105, 99, 0.7);
+  }
+}
+
+#home-section,
+#create-section {
+  .fas {
+    @include icon-blue;
+  }
+}
+
+#explore-section,
+#connect-section {
+  .fas {
+    @include icon-light;
+  }
+}
+
+.portfolio-link {
+  color: rgb(47, 41, 39);
+}
+
+.portfolio-link:hover {
+  text-decoration: none;
+  color: rgba(47, 41, 39, 0.7);
+}
+
+@media (max-width: 576px) {
+  .display-4 {
+    font-size: 3rem;
+  }
+  .lead {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  .lead {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 256px) {
+  .display-4 {
+    font-size: 1.5rem;
+  }
+  .lead {
+    font-size: 0.9rem;
+  }
+  #main-footer {
+    font-size: 0.8rem;
+  }
+}
