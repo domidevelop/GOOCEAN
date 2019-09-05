@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="../css/style.css" />
     <title>GOCEAN | Red Social de Gran Canaria</title>
   </head>
-  <body data-spy="scroll" data-target="main-nav main-footer" id="home">
+  <body
+    data-spy="scroll"
+    data-target="main-nav main-footer"
+    id="home"
+    onload="document.body.style.opacity='1'"
+  >
     <!-- NAVIAGATION -->
     <nav
       id="main-nav"
@@ -51,7 +56,7 @@
       <div class="dark-overlay">
         <div class="home-inner container">
           <div class="row">
-            <div class="col-lg-8 d-none d-lg-block">
+            <div class="col col-lg-8 d-none d-sm-block animation-home">
               <h1 class="display-4">
                 Conecta con la gente en Gran Canaria
               </h1>
@@ -82,7 +87,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 d-none d-lg-block animation-form">
               <div class="card bg-primary text-center card-form">
                 <div class="card-body">
                   <h3>Crear Perfil</h3>
@@ -129,6 +134,22 @@
               </div>
             </div>
           </div>
+          <div class="row">
+            <div class="col d-lg-none text-center animation-buttons">
+              <a
+                href="#create-head-section"
+                class="btn btn-outline-light btn-lg btn-block"
+                >Explorar</a
+              >
+              <a
+                href="#"
+                class="btn btn-outline-light btn-lg btn-block"
+                data-toggle="modal"
+                data-target="#moreInfoModal"
+                >Regístrate</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -164,7 +185,7 @@
         <div class="row">
           <div class="col-md-6">
             <img
-              src="../img/create-section1.jpg"
+              src="../img/create-section1_web.jpg"
               alt=""
               class="img-fluid mb-3 rounded-circle"
             />
@@ -227,7 +248,7 @@
         <div class="row">
           <div class="col-md-6 order-2">
             <img
-              src="../img/explore-section1.jpg"
+              src="../img/explore-section1_web.jpg"
               alt=""
               class="img-fluid mb-3 rounded-circle"
             />
@@ -291,7 +312,7 @@
         <div class="row">
           <div class="col-md-6">
             <img
-              src="../img/share-section1.jpg"
+              src="../img/share-section1_web.jpg"
               alt=""
               class="img-fluid mb-3 rounded-circle"
             />

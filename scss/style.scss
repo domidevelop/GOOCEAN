@@ -15,7 +15,52 @@ $font-family-base: 'Montserrat', sans-serif;
 body {
   background: $dark;
   color: $light;
+  opacity: 0;
+  transition: opacity 2s;
   //font-family: 'Josefin Sans', sans-serif;
+}
+
+nav {
+  animation: navtranslate 2s ease-in-out forwards;
+  transform: translateY(-200px);
+}
+
+@keyframes navtranslate {
+  0% {
+    transform: translateY(-200px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animation-home {
+  animation: hometranslate 2s ease-in-out 1.5s forwards;
+  transform: translateX(-1200px);
+}
+
+@keyframes hometranslate {
+  0% {
+    transform: translateX(-1200px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.animation-form,
+.animation-buttons {
+  animation: fadein 2s ease-in-out 2s forwards;
+  opacity: 0;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .navbar-brand {
@@ -38,23 +83,23 @@ body {
 }
 
 #home-section {
-  background: url(../img/home.jpg);
+  background: url(../img/home_web.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  min-height: 700px;
+  min-height: 100vh;
 
   .dark-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 700px;
+    min-height: 100vh;
     background: rgba(120, 105, 99, 0.7);
   }
 
   .home-inner {
-    padding-top: 150px;
+    padding-top: 120px;
   }
 
   .card-form {
@@ -64,7 +109,7 @@ body {
 
 #create-head-section,
 #connect-head-section {
-  background: url(../img/water-background.jpg);
+  background: url(../img/water-background_web.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -83,7 +128,7 @@ body {
 
 #explore-head-section,
 #main-footer {
-  background: url(../img/sand-background.jpg);
+  background: url(../img/sand-background_web.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;

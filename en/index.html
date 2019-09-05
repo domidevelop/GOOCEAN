@@ -8,7 +8,12 @@
     <link rel="stylesheet" href="../css/style.css" />
     <title>GOCEAN | Gran Canaria Social Network</title>
   </head>
-  <body data-spy="scroll" data-target="main-nav main-footer" id="home">
+  <body
+    data-spy="scroll"
+    data-target="main-nav main-footer"
+    id="home"
+    onload="document.body.style.opacity='1'"
+  >
     <!-- NAVIAGATION -->
     <nav
       id="main-nav"
@@ -51,7 +56,7 @@
       <div class="dark-overlay">
         <div class="home-inner container">
           <div class="row">
-            <div class="col-lg-8 d-none d-lg-block">
+            <div class="col col-lg-8 d-none d-sm-block animation-home">
               <h1 class="display-4">
                 Connect with people on Gran Canaria
               </h1>
@@ -82,7 +87,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 d-none d-lg-block animation-form">
               <div class="card bg-primary text-center card-form">
                 <div class="card-body">
                   <h3>Create Profile</h3>
@@ -129,6 +134,22 @@
               </div>
             </div>
           </div>
+          <div class="row p-5">
+            <div class="col d-lg-none text-center">
+              <a
+                href="#create-head-section"
+                class="btn btn-outline-light btn-lg btn-block"
+                >Discover</a
+              >
+              <a
+                href="#"
+                class="btn btn-outline-light btn-lg btn-block"
+                data-toggle="modal"
+                data-target="#moreInfoModal"
+                >Sign Up</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -164,7 +185,7 @@
         <div class="row">
           <div class="col-md-6">
             <img
-              src="../img/create-section1.jpg"
+              src="../img/create-section1_web.jpg"
               alt=""
               class="img-fluid mb-3 rounded-circle"
             />
@@ -227,7 +248,7 @@
         <div class="row">
           <div class="col-md-6 order-2">
             <img
-              src="../img/explore-section1.jpg"
+              src="../img/explore-section1_web.jpg"
               alt=""
               class="img-fluid mb-3 rounded-circle"
             />
@@ -289,7 +310,7 @@
         <div class="row">
           <div class="col-md-6">
             <img
-              src="../img/share-section1.jpg"
+              src="../img/share-section1_web.jpg"
               alt=""
               class="img-fluid mb-3 rounded-circle"
             />
@@ -474,7 +495,7 @@
       $('body').scrollspy({ target: '#main-nav' });
 
       // add smooth scrolling
-      $('#main-nav a, #main-footer a').on('click', function(e) {
+      $('body a').on('click', function(e) {
         // check for hash value
         if (this.hash !== '') {
           // prevent default behavior
