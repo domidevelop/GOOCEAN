@@ -527,7 +527,7 @@
       $('body').scrollspy({ target: '#main-nav' });
 
       // add smooth scrolling
-      $('#main-nav a, #main-footer a').on('click', function(e) {
+      $('body a').on('click', function(e) {
         // check for hash value
         if (this.hash !== '') {
           // prevent default behavior
