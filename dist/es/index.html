@@ -23,6 +23,93 @@
       content="Una red social para la gente que vive o esta visitando la isla de Gran Canaria, Islas Canarias, España. Crea tu perfil, conecta con otra gente y descubre las posibilidades."
     />
     <meta property="fb:admins" content="10214132747536152" />
+    <!-- ****** favicons ****** -->
+    <link rel="shortcut icon" href="../favicons/favicon.ico" />
+    <link rel="icon" sizes="16x16 32x32 64x64" href="../favicons/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="196x196"
+      href="../favicons/favicon-192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="160x160"
+      href="../favicons/favicon-160.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="../favicons/favicon-96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="64x64"
+      href="../favicons/favicon-64.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../favicons/favicon-32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../favicons/favicon-16.png"
+    />
+    <link rel="apple-touch-icon" href="../favicons/favicon-57.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="../favicons/favicon-114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="../favicons/favicon-72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="../favicons/favicon-144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="../favicons/favicon-60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="../favicons/favicon-120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="../favicons/favicon-76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="../favicons/favicon-152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../favicons/favicon-180.png"
+    />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta
+      name="msapplication-TileImage"
+      content="../favicons/favicon-144.png"
+    />
+    <meta name="msapplication-config" content="../favicons/browserconfig.xml" />
+    <!-- ****** favicons ****** -->
   </head>
   <body
     data-spy="scroll"
@@ -381,7 +468,6 @@
         <div class="container">
           <div class="row">
             <div class="col text-center pt-4">
-              <h3>G O C E A N</h3>
               <p class=" font-weight-bold lead">
                 <a
                   href="https://gocean.pro"
@@ -393,15 +479,13 @@
                   >es</a
                 >
               </p>
-              <p>
-                Todos los derechos reservados &copy; <span id="year"></span>
-              </p>
+              <h3>G O C E A N</h3>
               <button
                 class="btn btn-outline-light mt-2"
                 data-toggle="modal"
                 data-target="#contactModal"
               >
-                Contacta con nosotros
+                Contacto
               </button>
               <p class="pt-3">
                 Visita
@@ -414,6 +498,19 @@
                   >d o m i d e v e l o p . c o m</a
                 ><br />
                 para encontrar más proyectos.
+              </p>
+              <p class="small mt-5 mb-2">
+                &copy; <span id="year"></span>
+                <a
+                  href="https://domidevelop.com/es"
+                  target="_blank"
+                  rel="noopener"
+                  rel="noreferrer"
+                  aria-label="domidevelop"
+                  class="portfolio-link py-2 font-weight-bold"
+                  >domidevelop</a
+                >
+                - diseño web
               </p>
             </div>
           </div>
@@ -533,15 +630,15 @@
     ></script>
     <script>
       // Get the current year for the copyright
-      $('#year').text(new Date().getFullYear());
+      $("#year").text(new Date().getFullYear());
 
       // Init Scrollspy
-      $('body').scrollspy({ target: '#main-nav' });
+      $("body").scrollspy({ target: "#main-nav" });
 
       // add smooth scrolling
-      $('body a').on('click', function(e) {
+      $("body a").on("click", function(e) {
         // check for hash value
-        if (this.hash !== '') {
+        if (this.hash !== "") {
           // prevent default behavior
           e.preventDefault();
 
@@ -549,7 +646,7 @@
           const hash = this.hash;
 
           //Animate smooth scroll
-          $('html, body').animate({
+          $("html, body").animate({
             scrollTop: $(hash).offset().top
           }),
             800,
@@ -560,8 +657,8 @@
         }
       });
       // Close Navbar after click on link
-      $('.navbar-nav>li>a').on('click', function() {
-        $('.navbar-collapse').collapse('hide');
+      $(".navbar-nav>li>a").on("click", function() {
+        $(".navbar-collapse").collapse("hide");
       });
     </script>
   </body>
