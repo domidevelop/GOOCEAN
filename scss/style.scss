@@ -1,27 +1,90 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,300&display=swap");
 
 //  ******************CUTSOMIZE BOOTSTRAP******************
 
 $primary: #2567a1;
-$dark: #786963;
+$dark: #352d2b;
 $light: #f8f2e3;
 
-$font-family-base: 'Montserrat', sans-serif;
+$font-family-base: "Montserrat", sans-serif;
 
-@import 'bootstrap';
+// @import "bootstrap";
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "root";
+@import "reboot";
+@import "type";
+@import "images";
+@import "code";
+@import "grid";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "input-group";
+@import "custom-forms";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "pagination";
+@import "list-group";
+@import "close";
+@import "modal";
+@import "utilities";
 
 //  ****************** end of CUTSOMIZE BOOTSTRAP******************
+
+//  ****************** MIXINS ******************
+
+@mixin bg-cover {
+  background-size: cover;
+}
+
+@mixin icon-blue {
+  color: #2567a1;
+  padding: 5px;
+}
+
+@mixin icon-light {
+  color: #f8f2e3;
+  padding: 5px;
+}
+
+//  ****************** VARIABLES ******************
+
+$gradient-light: linear-gradient(
+  to top,
+  rgba(53, 45, 43, 0.7),
+  100%,
+  transparent
+);
+
+$gradient-blue: linear-gradient(
+  to top,
+  rgba(37, 102, 161, 0.3),
+  100%,
+  transparent
+);
+
+//  ****************** HTML AND BODY ******************
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: $dark;
   color: $light;
   opacity: 0;
-  transition: opacity 2s;
-  //font-family: 'Josefin Sans', sans-serif;
+  transition: opacity 0.1s;
 }
 
+//  ****************** ANIMATIONS ******************
+
 nav {
-  animation: navtranslate 2s ease-in-out forwards;
+  animation: navtranslate 1s ease-in-out forwards;
   transform: translateY(-200px);
 }
 
@@ -35,7 +98,7 @@ nav {
 }
 
 .animation-home {
-  animation: hometranslate 2s ease-in-out 1.5s forwards;
+  animation: hometranslate 1s ease-in-out 1s forwards;
   transform: translateX(-1200px);
 }
 
@@ -50,7 +113,7 @@ nav {
 
 .animation-form,
 .animation-buttons {
-  animation: fadein 2s ease-in-out 2s forwards;
+  animation: fadein 1s ease-in-out 1.5s forwards;
   opacity: 0;
 }
 
@@ -63,137 +126,85 @@ nav {
   }
 }
 
+//  ****************** NAVIGATION ******************
+
 .navbar-brand {
   font-size: 2rem;
-}
-
-@mixin icon-blue {
-  color: #2567a1;
-  padding: 5px;
-}
-
-@mixin icon-light {
-  color: #786963;
-  padding: 5px;
+  letter-spacing: 3px;
 }
 
 .navbar {
   border-bottom: #f8f2e3 1px solid;
-  opacity: 0.8;
 }
 
-#home-section {
-  background: url(../img/home_web.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  min-height: 100vh;
+//  ****************** SHOWCASE ******************
 
-  .dark-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 100vh;
-    background: rgba(120, 105, 99, 0.7);
-  }
+.home-section {
+  background: $gradient-light, url("../img/home_web.webp");
+  @include bg-cover;
+  background-attachment: fixed;
+  height: 100vh;
 
   .home-inner {
     padding-top: 120px;
   }
 
-  .card-form {
-    opacity: 0.8;
-  }
-}
-
-#create-head-section,
-#connect-head-section {
-  background: url(../img/water-background_web.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  min-height: 300px;
-  position: relative;
-
-  .dark-overlay-blue {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 300px;
-    background: rgba(37, 102, 161, 0.3);
-  }
-}
-
-#explore-head-section,
-#main-footer {
-  background: url(../img/sand-background_web.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  min-height: 300px;
-  position: relative;
-
-  .dark-overlay-light {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 300px;
-    background: rgba(120, 105, 99, 0.7);
-  }
-}
-
-#home-section,
-#create-section {
-  .fas {
-    @include icon-blue;
-  }
-}
-
-#explore-section,
-#connect-section {
   .fas {
     @include icon-light;
   }
 }
 
-.portfolio-link {
-  color: rgb(47, 41, 39);
+//  ****************** SECTIONS ******************
+
+.create-head-section,
+.connect-head-section {
+  background: $gradient-blue, url("../img/water-background_web.webp");
+  @include bg-cover;
+  background-attachment: fixed;
+  min-height: 300px;
 }
 
-.portfolio-link:hover {
-  text-decoration: none;
-  color: rgba(47, 41, 39, 0.7);
+.explore-head-section,
+.main-footer {
+  background: $gradient-light, url("../img/sand-background_web.webp");
+  @include bg-cover;
+  background-attachment: fixed;
+  min-height: 300px;
 }
+
+#create-section,
+#explore-section,
+#connect-section {
+  .fas {
+    @include icon-blue;
+  }
+}
+
+//  ****************** UTILITIES ******************
+
+// CSS snippet for smooth scroll not to overlapp with header
+#create-head-section::before,
+#explore-head-section::before,
+#connect-head-section::before {
+  display: block;
+  content: " ";
+  // height of navigation
+  margin-top: -75px;
+  height: 75px;
+  visibility: hidden;
+}
+
+//  ****************** MEDIA QUERIES ******************
 
 @media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
   .display-4 {
     font-size: 3rem;
   }
   .lead {
     font-size: 1.25rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .display-4 {
-    font-size: 2.5rem;
-  }
-  .lead {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 256px) {
-  .display-4 {
-    font-size: 1.5rem;
-  }
-  .lead {
-    font-size: 0.9rem;
-  }
-  #main-footer {
-    font-size: 0.8rem;
   }
 }

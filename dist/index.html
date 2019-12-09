@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="https://kit.fontawesome.com/a6ae180d5d.js"></script>
-    <link rel="stylesheet" href="css/style.css" />
-    <title>GOCEAN | Gran Canaria Social Network</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>GOCEAN 2.0. | Gran Canaria Social Network</title>
     <meta
       name="Description"
       content="Social network for people who live or are visiting the island of Gran Canaria, Canary Islands, Spain. Create your profile, connect with others and explore possibilities."
@@ -108,19 +108,14 @@
     <meta name="msapplication-config" content="./favicons/browserconfig.xml" />
     <!-- ****** favicons ****** -->
   </head>
-  <body
-    data-spy="scroll"
-    data-target="main-nav main-footer"
-    id="home"
-    onload="document.body.style.opacity='1'"
-  >
+  <body data-spy="scroll" id="home" onload="document.body.style.opacity='1'">
     <!-- NAVIAGATION -->
     <nav
       id="main-nav"
       class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top"
     >
       <div class="container">
-        <a href="#home" class="navbar-brand">G O C E A N</a>
+        <a href="#home" class="navbar-brand">GOCEAN 2.0</a>
         <span class="navbar-text text-light d-none d-lg-inline-block">
           Gran Canaria Social Network
         </span>
@@ -131,6 +126,7 @@
           data-target="#navbarCollapse"
         >
           <span class="navbar-toggler-icon"></span>
+          <span class="sr-only">Menu</span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav ml-auto">
@@ -153,7 +149,7 @@
 
     <!-- HOME SECTION -->
     <header id="home-section">
-      <div class="dark-overlay">
+      <div class="home-section">
         <div class="home-inner container">
           <div class="row">
             <div class="col col-lg-8 d-none d-sm-block animation-home">
@@ -269,7 +265,7 @@
 
     <!-- CREATE HEAD -->
     <section id="create-head-section">
-      <div class="dark-overlay-blue">
+      <div class="create-head-section">
         <div class="container">
           <div class="row">
             <div class="col text-center py-3 py-lg-5">
@@ -298,7 +294,7 @@
         <div class="row">
           <div class="col-md-6">
             <img
-              src="img/create-section1_web.jpg"
+              src="img/create-section1_web.webp"
               alt=""
               class="img-fluid mb-3 rounded-circle"
             />
@@ -333,7 +329,7 @@
 
     <!-- EXPLORE HEAD -->
     <section id="explore-head-section">
-      <div class="dark-overlay-light">
+      <div class="explore-head-section">
         <div class="container">
           <div class="row">
             <div class="col text-center py-3 py-lg-5">
@@ -361,7 +357,7 @@
         <div class="row">
           <div class="col-md-6 order-2">
             <img
-              src="img/explore-section1_web.jpg"
+              src="img/explore-section1_web.webp"
               alt=""
               class="img-fluid mb-3 rounded-circle"
             />
@@ -396,7 +392,7 @@
 
     <!-- CONNECT HEAD -->
     <section id="connect-head-section">
-      <div class="dark-overlay-blue">
+      <div class="connect-head-section">
         <div class="container">
           <div class="row">
             <div class="col text-center py-3 py-lg-5">
@@ -424,7 +420,7 @@
         <div class="row">
           <div class="col-md-6">
             <img
-              src="img/share-section1_web.jpg"
+              src="img/share-section1_web.webp"
               alt=""
               class="img-fluid mb-3 rounded-circle"
             />
@@ -460,12 +456,14 @@
 
     <!-- FOOTER -->
     <footer id="main-footer" class="bg-dark text-light">
-      <div class="dark-overlay-light">
+      <div class="main-footer">
         <div class="container">
           <div class="row">
             <div class="col text-center pt-4">
-              <p class=" font-weight-bold lead">
-                <a href="#home" class="text-decoration-none portfolio-link"
+              <p class="lead">
+                <a
+                  href="#home"
+                  class="text-decoration-none text-light font-weight-bold "
                   >en</a
                 >
                 /
@@ -487,7 +485,7 @@
                 Check out <br />
                 <a
                   href="https://domidevelop.com"
-                  class="portfolio-link px-2 font-weight-bold"
+                  class="text-light px-2 font-weight-bold text-decoration-none"
                   target="_blank"
                   rel="noopener"
                   aria-label="Visit domidevelop.com."
@@ -503,7 +501,7 @@
                   rel="noopener"
                   rel="noreferrer"
                   aria-label="domidevelop"
-                  class="portfolio-link py-2 font-weight-bold"
+                  class="text-light py-2 font-weight-bold"
                   >domidevelop</a
                 >
                 - web design
@@ -541,7 +539,7 @@
               Portfolio: <br />
               <a
                 href="https://domidevelop.com"
-                class="portfolio-link  font-weight-bold"
+                class="text-dark text-decoration-none font-weight-bold"
                 target="_blank"
                 rel="noopener"
                 aria-label="Visit domidevelop.com."
@@ -552,7 +550,7 @@
               Email: <br />
               <a
                 href="mailto:domidevelop@outlook.com"
-                class="portfolio-link  font-weight-bold"
+                class="text-dark text-decoration-none font-weight-bold"
                 >domidevelop@outlook.com</a
               >
             </p>
@@ -631,27 +629,6 @@
       // Init Scrollspy
       $("body").scrollspy({ target: "#main-nav" });
 
-      // add smooth scrolling
-      $("body a").on("click", function(e) {
-        // check for hash value
-        if (this.hash !== "") {
-          // prevent default behavior
-          e.preventDefault();
-
-          // store a hash
-          const hash = this.hash;
-
-          //Animate smooth scroll
-          $("html, body").animate({
-            scrollTop: $(hash).offset().top
-          }),
-            800,
-            function() {
-              // add hash to URL after the scroll
-              window.location.hash = hash;
-            };
-        }
-      });
       // Close Navbar after click on link
       $(".navbar-nav>li>a").on("click", function() {
         $(".navbar-collapse").collapse("hide");
